@@ -30,6 +30,13 @@ jobs:
         compiler: gcc/10
         defconfig: grus_defconfig
         image: Image.gz-dtb
+    - name: test
+      run: |
+          ls
+          cd /github/workspace
+          ls
+          cd /github/workspace/zipper/
+          ls
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:

@@ -11,7 +11,9 @@ jobs:
     steps:
     - name: Checkout kernel source
       uses: actions/checkout@v2
-
+      with:
+        repository: kyasu/android_kernel_xiaomi_sdm710
+        
     - name: Checkout zipper
       uses: actions/checkout@v2
       with:

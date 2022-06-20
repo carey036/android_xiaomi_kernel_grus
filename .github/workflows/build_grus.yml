@@ -31,9 +31,7 @@ jobs:
         compiler: gcc/10
         defconfig: grus_defconfig
         image: Image.gz-dtb
-
-    - name: Release build
-      uses: ncipollo/release-action@v1
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
       with:
-        artifacts: ${{ steps.build.outputs.outfile }}
-        tag: ${{inputs.tag}}
+        path: ${{ steps.build.outputs.outfile }}
